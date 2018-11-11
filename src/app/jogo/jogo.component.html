@@ -1,0 +1,28 @@
+<div class="game-container">
+  <div class="game-header">
+   <h4 class="logo">Copa de Snake - Rafael Resende</h4><br>  
+    <div class="score-block">
+      <h4 class="score" [ngClass]="{'new-best-score': newBestScore}">Pontuação: {{score}}</h4>
+    </div>
+  </div>
+  <div class="gmap" >
+    <div class="text-center">
+      <div id = "map" style="width:468px;height:468px" ></div>
+    </div>
+  </div>
+    
+  <div class="row" *ngFor="let column of board; let i = index;">
+    <div class="column" [ngStyle]= "{'background-color': defineCores(i, j), opacity : defineOpacity(i,j)}" *ngFor="let row of column; let j = index"></div>
+  </div>
+  
+  
+  <div class="start-button" [ngClass]="{'disable-clicks': jogando}" (click)="mostraMenu()">Start Game</div>
+  <div class="new-game-menu" *ngIf="seMostraMenu">
+    <span class="new-game-menu-label">Selecione o Modo</span>
+    <div class="start-button new-game-button" (click)="novoJogo(modulo)" *ngFor="let modulo of getKeys(all_modes)">{{all_modes[modulo]}}</div>
+  </div>
+  <div class="new-game-menu" *ngIf="seMostraPaises">
+    <span class="new-game-menu-label">Selecione o País</span>
+    <div class="start-button new-game-button" (click)="trocaPais(pais)" *ngFor="let pais of getKeys(all_paises)">{{all_paises[pais]}}</div>
+  </div>
+</div>

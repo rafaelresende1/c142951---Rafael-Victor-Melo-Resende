@@ -7,7 +7,12 @@
   .game-header>.score-block {
     display: inline-block;
   }
-  
+  a:link{
+    color: #fff
+  }
+  a:visited{
+    color: #fff
+  }
   .score-block>.score {
     position: absolute;
     right: 8px;

@@ -17,9 +17,9 @@ export const CORES = {
 };
 
 export const GAME_MODES = {
-  classic: 'Classic',
-  semParede: 'No Walls',
-  obstaculos: 'Obstacles'
+  classic: 'Clássico',
+  semParede: 'Sem Paredes',
+  obstaculos: 'Obstáculos'
 };
 
 export const PAISES = {

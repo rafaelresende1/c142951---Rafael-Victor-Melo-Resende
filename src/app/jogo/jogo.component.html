@@ -16,13 +16,13 @@
   </div>
   
   
-  <div class="start-button" [ngClass]="{'disable-clicks': jogando}" (click)="mostraMenu()">Start Game</div>
+  <div class="start-button" [ngClass]="{'disable-clicks': jogando}" (click)="mostraMenu()">Começar o Jogo</div>
   <div class="new-game-menu" *ngIf="seMostraMenu">
     <span class="new-game-menu-label">Selecione o Modo</span>
     <div class="start-button new-game-button" (click)="novoJogo(modulo)" *ngFor="let modulo of getKeys(all_modes)">{{all_modes[modulo]}}</div>
   </div>
   <div class="new-game-menu" *ngIf="seMostraPaises">
-    <span class="new-game-menu-label">Selecione o País</span>
+    <span class="new-game-menu-label">Selecione seu País</span>
     <div class="start-button new-game-button" (click)="trocaPais(pais)" *ngFor="let pais of getKeys(all_paises)">{{all_paises[pais]}}</div>
   </div>
 </div>
